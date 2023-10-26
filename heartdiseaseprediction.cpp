@@ -1,7 +1,8 @@
+//Heart Disease Prediction
 #include<iostream>
 #include<string.h>
 using namespace std;
-class patient
+class patient //class declaration
    {
     public:
     int id,count=0;
@@ -10,18 +11,18 @@ class patient
     int n=5;
     float percentage=0;
     int reports[100];
-    void getdetails()
+    void getdetails() //function getdetails()
     {
         cout<<"\tEnter the ID"<<endl<<"\t";
         cin>>id;
         cout<<"\tEnter the Name\n"<<endl<<"\t";
         cin>>name;
     }
-    void displaydetails()
+    void displaydetails() //function displaydetails()
     {
         cout<<"\tThe ID of Patient is "<<id<<" and Name is "<<name<<endl<<"\t";
     }
-    void getreports()
+    void getreports() //function getreports()
     {
         n=4;
         cout<<"Enter the Reports of Blood Pressure (min 100)\tSugar Level(min 70)\tChlosterol (min 100)\tAge (min 20)\t" << endl<<"\t";
@@ -30,12 +31,12 @@ class patient
             cin>>reports[i];
         }
     }
-    void displayreports()
+    void displayreports() //function displayreports()
     {
         for(int i=0;i<n;i++)
         {
             int a=i;
-           switch (a)
+           switch (a) //switch case statement 
            {
             case 0:
                 cout<<"\tBlood Pressure: ";
@@ -58,7 +59,7 @@ class patient
         cout<<"\tDo you Smoke Enter Y and N ?\t"<<endl;
         cin>>smoke;
         }
-    void analysis()
+    void analysis() //function analysis()
     {
         percentage=0;
         for(int i=0;i<n;i++)
@@ -153,11 +154,11 @@ class patient
 
     int main()
     {
-patient p;
-p.getdetails();
-p.displaydetails();
-p.getreports();
-p.displayreports();
-p.analysis();
-p.results();
+patient p; //class object p
+p.getdetails();//call function getdetails()
+p.displaydetails();//call function displaydetails()
+p.getreports();//call function getreports()
+p.displayreports();//call function displayreports()
+p.analysis();//call function analysis()
+p.results();//call function results()
     }
